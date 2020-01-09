@@ -1,0 +1,12 @@
+{
+  "name": "bazooka-bitfinex",
+  "version": "0.0.0",
+  "description": "BazookaBitfinex",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "bzk": "0.0.1"
+  }
+}
