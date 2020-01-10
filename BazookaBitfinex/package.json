@@ -7,6 +7,14 @@
     "name": ""
   },
   "dependencies": {
-    "bzk": "0.0.1"
+    "bitfinex-api-node": "^3.0.2",
+    "bzk": "0.0.4"
+  },
+  "scripts": {
+    "test": "mocha   --exit"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.0"
   }
 }
