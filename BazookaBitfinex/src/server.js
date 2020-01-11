@@ -1,17 +1,12 @@
-const BFX = require('bitfinex-api-node');
+const Config = require('bzk').Config;
+const MC = require('./ManagerCenter');
+var _cfg = require('../demo/MyCfg');
+var config = new Config(_cfg);
+MC.init(config);
 
-const bfx = new BFX({
-    apiKey: '',
-    apiSecret: '',
+const bfx = MC.bfx;
 
-    ws: {
-        autoReconnect: true,
-        seqAudit: true,
-        packetWDDelay: 10 * 1000
-    }
-});
-
-const ws = bfx.ws();
+/*const ws = bfx.ws();
 
 ws.on('error', (err) => console.log(err))
 ws.on('open', () => {
@@ -22,4 +17,15 @@ ws.onTrades({ symbol: 'tBTCUSD' }, (trades) => {
     console.log(`trades: ${JSON.stringify(trades)}`)
 });
 
-ws.open()
+ws.open()*/
+
+const rest = bfx.rest(2, { transform: true })
+rest.symbols().then(symbols => {
+    console.log('available symbols are: %s', symbols.join(', '))
+});
+
+//BTCUSD
+
+rest.tickersHistory(['tBTCUSD'], 1575445533000, 1578753429000 ).then(tk => {
+    console.log("tk:" + JSON.stringify(tk));
+});

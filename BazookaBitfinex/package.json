@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "bitfinex-api-node": "^3.0.2",
-    "bzk": "0.0.4"
+    "bzk": "0.0.5"
   },
   "scripts": {
     "test": "mocha   --exit"

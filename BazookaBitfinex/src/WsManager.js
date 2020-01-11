@@ -1,21 +1,13 @@
 const BFX = require('bitfinex-api-node');
+const ManagerCenter = require('./ManagerCenter');
 
 class WsManager {
 
     static instance;
-    bfx;
+    get bfx() { return ManagerCenter.bfx;} 
 
     init(cfg) {
 
-        this.bfx = new BFX({
-            apiKey: cfg.data.bitfinex.apiKey,
-            apiSecret: cfg.data.bitfinex.apiSecret,
-            ws: {
-                autoReconnect: true,
-                seqAudit: true,
-                packetWDDelay: 10 * 1000
-            }
-        });
 
     }
 

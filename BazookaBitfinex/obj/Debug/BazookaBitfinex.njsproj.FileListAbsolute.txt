@@ -1,0 +1,2 @@
+C:\Users\DDT\Desktop\BZK\Bazooka-Bitfinex\BazookaBitfinex\obj\Debug\BazookaBitfinex.njsprojAssemblyReference.cache
+C:\Users\DDT\Desktop\BZK\Bazooka-Bitfinex\BazookaBitfinex\bin\Microsoft.NodejsTools.WebRole.dll
